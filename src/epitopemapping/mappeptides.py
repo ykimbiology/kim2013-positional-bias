@@ -5,7 +5,7 @@ import time
 import os
 
 
-'''
+"""
 Pseudocode programming process:
 
 GOAL: To accurately map peptides onto proteins.
@@ -40,12 +40,13 @@ GOAL: To accurately map peptides onto proteins.
     
 #== Tests ==
     (1) With respect to method_brute,how many mappings are retrieved by methodA?
-'''
+"""
 
 
 
 
-''' Too many input variables. Take out some variables to at most 7 total.
+""" 
+Too many input variables. Take out some variables to at most 7 total.
     Ideally:
     INPUT:
         fname_peptide_list_fasta
@@ -58,7 +59,7 @@ GOAL: To accurately map peptides onto proteins.
     1. map peptides to antigens.
     2. If true, keep only best match for each peptide.
     3. If true, keep only those mapping records that involve homologous source and target antigens.
-'''
+"""
 
 from algorithm.factory_filter_mapping import filter_mapping_unique_keep_ties, filter_mapping_by_homology_protein
 

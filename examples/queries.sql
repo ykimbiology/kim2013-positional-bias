@@ -75,9 +75,12 @@ AND m.class = 'I'
 AND t.iv1_imm_object_id=obj.object_id
 AND (obj.object_type='Fragment of a Natural Sequence Molecule' OR obj.object_type='Sequence Molecule No Natural Source')
 
-
+################################################################################
 # Given a list of epitope ids, how to retrieve source antigen information (e.g. source antigen ids, sequences):
 # This sql returns source antigen information only for epitopes listed in (133, 570).
+# The list of epitopes (133, 570) are all from influenza virus.
+# For example, the iedb url for epitope=133 is: http://www.iedb.org/epId/133
+# This entry should also mention source antigen accession, which should match the query results returned by the following query.
 SELECT eo.epitope_id, obj.starting_position, obj.ending_position, s.source_id, s.accession, s.name, s.organism_name, s.sequence
 FROM iedb_public.epitope_object eo, iedb_public.source s, iedb_public.object obj
 WHERE eo.epitope_id in (133, 570)
